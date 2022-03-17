@@ -55,15 +55,15 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/Contact/Index">Contact Information</a>
                                     <a class="dropdown-item" href="/Contact/ConsultationRequest">Consultation Request</a>
-                                    <a class="dropdown-item" href="/Contact/Faqs">FAQs</a>
+                                    <a class="dropdown-item" asp-controller="Contact" asp-action="Faqs">FAQs</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Home/Pricing">Pricing</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Home/MissionStatement">Mission Statement</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Mission_Statement">Mission Statement</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

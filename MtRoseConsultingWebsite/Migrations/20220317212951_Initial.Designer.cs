@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MtRoseConsultingWebsite.Areas.Identity.Data;
+using MtRoseConsultingWebsite.Data;
 
 #nullable disable
 
 namespace MtRoseConsultingWebsite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220317002021_Initial")]
+    [Migration("20220317212951_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -171,6 +171,29 @@ namespace MtRoseConsultingWebsite.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Blogs");
+                });
+
+            modelBuilder.Entity("MtRoseConsultingWebsite.Models.ConsultationRequests", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("About")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ConsultationRequests");
                 });
 
             modelBuilder.Entity("MtRoseConsultingWebsite.Models.User", b =>
