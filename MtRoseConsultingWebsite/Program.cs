@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using MtRoseConsultingWebsite.Areas.Identity.Data;
+using MtRoseConsultingWebsite.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);

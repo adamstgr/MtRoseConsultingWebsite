@@ -43,9 +43,27 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/Home/Strategy/#OP">Our Process</a>
-                                    
+
                                 </div>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Contact" asp-action="Index">
+                                    Contact
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/Contact/Index">Contact Information</a>
+                                    <a class="dropdown-item" href="/Contact/ConsultationRequest">Consultation Request</a>
+                                    <a class="dropdown-item" asp-controller="Contact" asp-action="Faqs">FAQs</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Mission_Statement">Mission Statement</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

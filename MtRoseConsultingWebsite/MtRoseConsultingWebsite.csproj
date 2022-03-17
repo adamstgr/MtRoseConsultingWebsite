@@ -25,8 +25,18 @@
   <ItemGroup>
     <None Remove="Data\" />
     <None Remove="Pomelo.EntityFrameworkCore.MySql" />
+    <None Remove="Views\Contact\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Models\Faqs.cshtml" />
+    <Content Remove="Models\Faqs.cshtml" />
   </ItemGroup>
 </Project>
