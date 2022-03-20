@@ -31,3 +31,61 @@ h1 {
     padding-top: 5rem;
 }
 
+#bgslider {
+    overflow: hidden;
+    width:200px;
+    height:200px;
+}
+#bgslider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 30s slidy infinite;
+
+}
+
+#bgslider figure img {
+            
+            float: left;
+            
+}
+
+
+/*div {
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: animateSectionBackground infinite 240s;
+}*/
+
+#mydiv {
+    animation: animateSectionBackground 40s infinite;
+    width: 1000px;
+    height: 700px;
+    background-size: cover;
+}
+
+@keyframes animateSectionBackground {
+    00%, 19% {
+        background-image: url(/img1.jpg);
+    }
+
+    20%, 39% {
+        background-image: url(/img2.jpg);
+    }
+
+    40%, 59% {
+        background-image: url(/img3.jpg);
+    }
+
+    60%, 79% {
+        background-image: url(/img4.jpg);
+    }
+
+    80%, 99% {
+        background-image: url(/img5.jpg);
+    }
+}
