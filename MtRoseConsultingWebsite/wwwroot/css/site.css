@@ -69,23 +69,23 @@ h1 {
 }
 
 @keyframes animateSectionBackground {
-    00%, 19% {
+    00% {
         background-image: url(/img1.jpg);
     }
 
-    20%, 39% {
+    20% {
         background-image: url(/img2.jpg);
     }
 
-    40%, 59% {
+    40% {
         background-image: url(/img3.jpg);
     }
 
-    60%, 79% {
+    60% {
         background-image: url(/img4.jpg);
     }
 
-    80%, 99% {
+    80% {
         background-image: url(/img5.jpg);
     }
 }

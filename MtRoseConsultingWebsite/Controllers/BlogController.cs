@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MtRoseConsultingWebsite.Data;
 using MtRoseConsultingWebsite.ViewModels;
@@ -29,12 +30,14 @@ namespace MtRoseConsultingWebsite.Controllers
             return View(blogs);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult CreateBlog()
         {
             return View();
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult CreateBlog(CreateBlogViewModel viewModel)
         {
