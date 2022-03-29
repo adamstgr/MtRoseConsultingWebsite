@@ -16,7 +16,10 @@ html {
 
 body {
   margin-bottom: 60px;
+  
 }
+
+
 
 header {
     position: fixed;
@@ -24,6 +27,7 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 
@@ -54,10 +58,10 @@ h1 {
             
 }
 
-.dropdown-menu show {
+/*.dropdown-menu show {
     position: relative !important;
     z-index: 99999 !important;
-}
+}*/
 /*div {
     background-position: 50% 100%;
     background-repeat: no-repeat;
