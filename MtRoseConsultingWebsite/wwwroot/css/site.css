@@ -9,8 +9,9 @@
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    scroll-padding-top: 70px; /* height of sticky header */
 }
 
 body {
@@ -53,14 +54,16 @@ h1 {
             
 }
 
-
+.dropdown-menu show {
+    position: relative !important;
+    z-index: 99999 !important;
+}
 /*div {
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: contain;
     animation: animateSectionBackground infinite 240s;
 }*/
-
 #mydiv {
     animation: animateSectionBackground 40s infinite;
     width: 1000px;
@@ -89,3 +92,4 @@ h1 {
         background-image: url(/img5.jpg);
     }
 }
+
