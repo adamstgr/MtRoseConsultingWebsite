@@ -1,9 +1,11 @@
 ﻿global using MtRoseConsultingWebsite.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using MtRoseConsultingWebsite.Data;
-
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using MtRoseConsultingWebsite.Data;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using MtRoseConsultingWebsite.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
