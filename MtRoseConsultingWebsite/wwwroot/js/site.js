@@ -35,13 +35,13 @@ function SlideShow(n) {
     slides[slidePosition - 1].style.display = "block";
     circles[slidePosition - 1].className += " enable";
 
-    var breaknow = true;
+    breaknow = true;
 }
 
 //var slidePosition = 1;
 //SlideShow(slidePosition);
 
-var slidePosition = 0;
+var slidePosition2 = 0;
 SlideShow();
 
 async function SlideShow() {
@@ -57,9 +57,9 @@ async function SlideShow() {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slidePosition++;
-    if (slidePosition > slides.length) { slidePosition = 1 }
-    slides[slidePosition - 1].style.display = "block";
+    slidePosition2++;
+    if (slidePosition2 > slides.length) { slidePosition2 = 1 }
+    slides[slidePosition2 - 1].style.display = "block";
 
     await delay(5);
     SlideShow();
