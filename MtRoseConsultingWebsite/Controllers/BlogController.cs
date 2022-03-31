@@ -56,6 +56,41 @@ namespace MtRoseConsultingWebsite.Controllers
             return View("CreateBlog", viewModel);
         }
 
+        [Authorize(Roles = "admin")]
+        [HttpGet]
+        public IActionResult Edit(Guid blogId)
+        {
+            BlogPost blog = context.Blogs.Find(blogId);
+
+            EditBlogViewModel viewModel = new EditBlogViewModel();
+
+            viewModel.Id = blogId;
+            viewModel.Title = blog.Title;
+            viewModel.Content = blog.Content;
+               
+
+            return View("Edit", viewModel);
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpPost]
+        public IActionResult Edit(EditBlogViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                BlogPost blog = context.Blogs.Find(viewModel.Id);
+                blog.Title = viewModel.Title;
+                blog.Content = viewModel.Content;
+                context.Blogs.Update(blog);
+                context.SaveChanges();
+                return RedirectToAction("Blogs");
+
+            }
+
+            return View("Edit", viewModel);
+        }
+
+
 
     }
 }

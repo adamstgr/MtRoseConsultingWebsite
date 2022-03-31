@@ -1,13 +1,18 @@
-﻿
-@{
+﻿@{
 }
-@using MtRoseConsultingWebsite.ViewModels
-@model CreateBlogViewModel
+
+
+@model EditBlogViewModel
+
 <br />
 <br />
 <br />
 
-<form method="post">
+<form method="post" asp-controller="Blog" asp-action="Edit">
+    <div class="form-group">
+        <input readonly style="display:none;" asp-for="Id" />
+    </div>
+
     <div class="form-group">
         <label asp-for="Title"></label>
         <input class="form-control" asp-for="Title" />

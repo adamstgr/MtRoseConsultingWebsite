@@ -6,6 +6,7 @@ global using MtRoseConsultingWebsite.Data;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using MtRoseConsultingWebsite.ViewModels;
+global using System.ComponentModel.DataAnnotations;
 
 var builder = WebApplication.CreateBuilder(args);
 
