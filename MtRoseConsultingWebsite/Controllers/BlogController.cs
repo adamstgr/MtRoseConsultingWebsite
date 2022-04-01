@@ -26,7 +26,7 @@ namespace MtRoseConsultingWebsite.Controllers
             List<BlogPost> blogs = new();
             blogs = context.Blogs.ToList();
 
-
+            blogs.Reverse();
             return View(blogs);
         }
 

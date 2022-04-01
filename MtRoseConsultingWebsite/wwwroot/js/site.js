@@ -61,6 +61,6 @@ async function SlideShow() {
     if (slidePosition2 > slides.length) { slidePosition2 = 1 }
     slides[slidePosition2 - 1].style.display = "block";
 
-    await delay(5);
+    await delay(4);
     SlideShow();
 } 
