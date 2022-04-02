@@ -1,9 +1,49 @@
-﻿@{
-    
-}
+﻿<div class="slideshow-container">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers">
+        <div class="MessageInfo">1 / 5</div>
+        <img src="\img1.jpg" style="width:100%">
+        <div class="Info">First caption</div>
+    </div>
+
+    <div class="Containers">
+        <div class="MessageInfo">2 / 5</div>
+        <img src="\img2.jpg" style="width:100%">
+        <div class="Info">Second Caption</div>
+    </div>
+
+    <div class="Containers">
+        <div class="MessageInfo">3 / 5</div>
+        <img src="\img3.jpg" style="width:100%">
+        <div class="Info">Third Caption</div>
+    </div>
+
+    <div class="Containers">
+        <div class="MessageInfo">4 / 5</div>
+        <img src="\img4.jpg" style="width:100%">
+        <div class="Info">Fourth Caption</div>
+    </div>
+
+    <div class="Containers">
+        <div class="MessageInfo">5 / 5</div>
+        <img src="\img5.jpg" style="width:100%">
+        <div class="Info">Fifth Caption</div>
+    </div>
+
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+    <span class="dots" onclick="currentSlide(4)"></span>
+    <span class="dots" onclick="currentSlide(5)"></span>
 </div>
 
+<h1 style="text-align:center;">Mount Rose Consulting</h1>

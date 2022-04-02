@@ -1,0 +1,24 @@
+﻿
+@{
+}
+@using MtRoseConsultingWebsite.ViewModels
+@model CreateBlogViewModel
+<br />
+<br />
+<br />
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input class="form-control" asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea class="form-control" asp-for="Content"></textarea>
+        <span asp-validation-for="Content"></span>
+    </div>
+
+    <input class="btn btn-outline-secondary" type="submit" value="Submit" />
+
+</form>

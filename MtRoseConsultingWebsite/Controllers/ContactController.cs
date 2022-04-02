@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using MtRoseConsultingWebsite.ViewModels;
-using MtRoseConsultingWebsite.Models;
-using MtRoseConsultingWebsite.Data;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
+﻿
 namespace MtRoseConsultingWebsite.Controllers
 {
     public class ContactController : Controller
@@ -43,6 +33,7 @@ namespace MtRoseConsultingWebsite.Controllers
                 cr.Email = viewModel.Email;
                 cr.PhoneNumber = viewModel.PhoneNumber;
                 cr.About = viewModel.About;
+                cr.DateRequested = DateTime.Now;
                 context.ConsultationRequests.Add(cr);
                 context.SaveChanges();
                 return View("ThankYou");
@@ -55,6 +46,16 @@ namespace MtRoseConsultingWebsite.Controllers
         public IActionResult Faqs()
         {
             return View();
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpGet]
+        public IActionResult ViewRequests()
+        {
+            var list = context.ConsultationRequests.ToList();
+
+
+            return View(list);
         }
     }
 }

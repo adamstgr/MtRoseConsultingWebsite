@@ -180,6 +180,9 @@ namespace MtRoseConsultingWebsite.Migrations
                     b.Property<string>("About")
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("DateRequested")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Email")
                         .HasColumnType("longtext");
 

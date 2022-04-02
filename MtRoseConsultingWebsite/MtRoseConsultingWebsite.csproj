@@ -28,12 +28,14 @@
     <None Remove="Views\Contact\" />
     <None Remove="ViewModels\" />
     <None Remove="Migrations\" />
+    <None Remove="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Models\Faqs.cshtml" />

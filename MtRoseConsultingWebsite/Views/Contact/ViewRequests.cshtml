@@ -1,0 +1,20 @@
+﻿
+<br />
+<br />
+<br />
+<br />
+
+@model List<ConsultationRequests>
+@if (Model != null && Model.Count > 0)
+{
+    <ul>
+
+        @foreach (var item in Model)
+        {
+
+            <li>@item.DateRequested : @item.Name @item.PhoneNumber @item.Email @item.About</li>
+        }
+
+
+    </ul>
+}

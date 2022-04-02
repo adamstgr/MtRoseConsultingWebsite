@@ -1,0 +1,22 @@
+﻿
+@{
+}
+@using MtRoseConsultingWebsite.Models
+@model List<BlogPost>
+
+<h1>Blogs:</h1>
+
+@if (Model != null && Model.Count > 0)
+    {
+
+    @foreach (var b in Model)
+        {
+        <h4>@b.Title</h4>
+        <p>Created: @b.Created</p>
+        <p>@b.Content</p>
+        @if (User.IsInRole("admin"))
+            {
+            <a asp-controller="Blog" asp-action="Edit" asp-route-blogId="@b.Id">Edit</a>
+            }
+        }
+    }
