@@ -17,80 +17,82 @@
 </head>
 <body style="margin-top: 0; padding-top: 0;">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/logo.png" alt="Mount Rose Consulting" style=" width: 105px; height: 40px; " />&nbsp;Mount Rose Consulting</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Home" asp-action="Services">
-                                    Services
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="/Home/Services/#BPSR">Business Plan & Strategy Review</a>
-                                    <a class="dropdown-item" href="/Home/Services/#BT">Business Transition</a>
-                                    <a class="dropdown-item" href="/Home/Services/#TR">Technology Review</a>
-                                    <a class="dropdown-item" href="/Home/Services/#DM">Digital Migration</a>
-                                    <a class="dropdown-item" href="/Home/Services/#RMA">Revenue & Margin Analysis</a>
+        
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom shadow shadow-md shadow-intensity-lg mb-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/logo.png" alt="Mount Rose Consulting" style=" width: 105px; height: 40px; " />&nbsp;Mount Rose Consulting</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Home" asp-action="Services">
+                                        Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/Home/Services/#BPSR">Business Plan & Strategy Review</a>
+                                        <a class="dropdown-item" href="/Home/Services/#BT">Business Transition</a>
+                                        <a class="dropdown-item" href="/Home/Services/#TR">Technology Review</a>
+                                        <a class="dropdown-item" href="/Home/Services/#DM">Digital Migration</a>
+                                        <a class="dropdown-item" href="/Home/Services/#RMA">Revenue & Margin Analysis</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Home" asp-action="Strategy">
-                                    MRC Strategy
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="/Home/Strategy/#OP">Our Process</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Home" asp-action="Strategy">
+                                        MRC Strategy
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/Home/Strategy/#OP">Our Process</a>
 
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Contact" asp-action="Index">
-                                    Contact
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="/Contact/Index">Contact Information</a>
-                                    <a class="dropdown-item" href="/Contact/ConsultationRequest">Consultation Request</a>
-                                    <a class="dropdown-item" asp-controller="Contact" asp-action="Faqs">FAQs</a>
-                                    @if (User.IsInRole("admin"))
-                                    {
-                                    <a class="dropdown-item" asp-controller="Contact" asp-action="ViewRequests">View Requests</a>
-                                    }
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-controller="Contact" asp-action="Index">
+                                        Contact
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/Contact/Index">Contact Information</a>
+                                        <a class="dropdown-item" href="/Contact/ConsultationRequest">Consultation Request</a>
+                                        <a class="dropdown-item" asp-controller="Contact" asp-action="Faqs">FAQs</a>
+                                        @if (User.IsInRole("admin"))
+                                        {
+                                            <a class="dropdown-item" asp-controller="Contact" asp-action="ViewRequests">View Requests</a>
+                                        }
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Pricing">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Mission_Statement">Mission Statement</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Blog" asp-action="Blogs">Blogs</a>
-                        </li>
-                        @if (User.IsInRole("admin"))
-                        {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Blog" asp-action="CreateBlog">Create Blog</a>
-                        </li>
-                        }
-                            
-                    </ul>
-                    <partial name="_LoginPartial" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Home" asp-action="Mission_Statement">Mission Statement</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Blog" asp-action="Blogs">Blogs</a>
+                            </li>
+                            @if (User.IsInRole("admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="Blog" asp-action="CreateBlog">Create Blog</a>
+                                </li>
+                            }
+
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            
     </header>
     <div class="container">
         <main role="main" class="pb-3">
