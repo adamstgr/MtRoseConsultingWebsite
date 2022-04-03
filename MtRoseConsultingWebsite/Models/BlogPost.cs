@@ -25,6 +25,16 @@ namespace MtRoseConsultingWebsite.Models
             Title = title;
             Content = content;
         }
+
+        public string ToId()
+        {
+            return 'a' + Id.ToString("N");
+        }
+
+        public string ToId2()
+        {
+            return ToId() + 'w';
+        }
     }
 }
 

@@ -13,6 +13,7 @@ namespace MtRoseConsultingWebsite.ViewModels
 		[Display(Name = "Content:")]
 		public string Content { get; set; }
 
+		public string description { get; set; }
 
 		public CreateBlogViewModel()
 		{
