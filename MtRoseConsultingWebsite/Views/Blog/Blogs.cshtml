@@ -4,19 +4,51 @@
 @using MtRoseConsultingWebsite.Models
 @model List<BlogPost>
 
+<script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
 <h1>Blogs:</h1>
 
 @if (Model != null && Model.Count > 0)
-    {
+{
 
     @foreach (var b in Model)
-        {
+    {
         <h4>@b.Title</h4>
         <p>Created: @b.Created</p>
-        <p>@b.Content</p>
+        <input type="hidden" id="@b.ToId()" asp-for="@b.Content" />
+        <div id="@b.ToId2()">
+            @Html.Raw(b.Content)
+        </div>
         @if (User.IsInRole("admin"))
-            {
+        {
             <a asp-controller="Blog" asp-action="Edit" asp-route-blogId="@b.Id">Edit</a>
-            }
         }
+        <br />
+        <br />
     }
+}
+
+<script>
+
+    @if (Model != null && Model.Count > 0)
+        {
+    @for (int i= 0; i< Model.Count; i++)
+        {
+                @: var quill = new Quill(@Model[i].ToId2(), { modules: { toolbar: false }, theme: 'snow' });
+                @: var delta = document.getElementById('@Model[i].ToId()').value;
+                @: quill.setContents(JSON.parse(delta));
+            }
+    }
+
+</script>
+@*<script>window.onload = function onload() {
+     @if (Model != null && Model.Count > 0)
+        {
+    @for (int i= 0; i< Model.Count; i++)
+            {
+        @: var delta = document.getElementById('jdr').value;
+        @: @i.setContents(JSON.parse(delta));
+            }
+    }
+    }</script>*@

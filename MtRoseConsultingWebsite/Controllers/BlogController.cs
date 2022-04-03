@@ -34,7 +34,9 @@ namespace MtRoseConsultingWebsite.Controllers
         [HttpGet]
         public IActionResult CreateBlog()
         {
-            return View();
+            CreateBlogViewModel viewModel = new();
+            viewModel.description = "";
+            return View(viewModel);
         }
 
         [Authorize(Roles = "admin")]
