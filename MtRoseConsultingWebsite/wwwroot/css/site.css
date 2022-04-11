@@ -15,10 +15,12 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  
+    margin-bottom: 60px;
+    
 }
-
+main {
+    z-index:-1
+}
 
 
 header {
@@ -29,6 +31,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
 
 
 h1 {
